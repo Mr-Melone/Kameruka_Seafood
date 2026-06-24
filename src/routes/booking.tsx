@@ -76,7 +76,7 @@ function BookingPage() {
       </section>
 
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-[1fr_320px] md:px-6 md:py-16">
-        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm md:p-8">
+        <div className="glass rounded-2xl p-6 md:p-8">
           {success ? (
             <div className="flex flex-col items-center gap-4 py-10 text-center">
               <CheckCircle2 className="h-14 w-14 text-[var(--ocean)]" />
@@ -119,7 +119,7 @@ function BookingPage() {
           )}
         </div>
 
-        <aside className="rounded-2xl border border-border bg-secondary/50 p-6">
+        <aside className="glass rounded-2xl p-6">
           <h3 className="font-display text-lg font-semibold text-[var(--ocean-deep)]">Opening Hours</h3>
           <p className="mt-1 text-xs text-muted-foreground">Please book within hours.</p>
           <ul className="mt-4 space-y-1.5 text-sm">
