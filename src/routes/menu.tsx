@@ -89,8 +89,6 @@ const sections: Section[] = [
   },
 ];
 
-import { Reveal } from "@/components/reveal";
-import { Camera } from "lucide-react";
 
 export default function MenuPage() {
   return (
