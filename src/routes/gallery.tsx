@@ -61,7 +61,7 @@ function GalleryPage() {
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-6 md:py-16">
         <div className="grid auto-rows-[200px] grid-cols-2 gap-3 md:grid-cols-4">
           {tiles.map((t, i) => (
-            <Reveal key={i} delay={i * 0.05} className={t.span ?? ""}>
+            <Reveal key={i} delay={i * 0.05} className={`h-full ${t.span ?? ""}`}>
               <figure className="glass h-full w-full overflow-hidden rounded-xl">
                 {t.src ? (
                   <img
