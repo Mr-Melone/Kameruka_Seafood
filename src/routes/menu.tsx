@@ -87,40 +87,62 @@ const sections: Section[] = [
   },
 ];
 
+import { Reveal } from "@/components/reveal";
+import { Camera } from "lucide-react";
+
 export default function MenuPage() {
   return (
     <SiteLayout>
-      <section className="bg-[var(--ocean)] text-white">
-        <div className="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20">
-          <h1 className="font-display text-4xl font-bold md:text-5xl">Our Menu</h1>
-          <p className="mt-3 max-w-2xl text-[var(--sand)]/90">
-            Dine-in, takeaway or order ahead by phone. Prices listed in-store — call us on{" "}
-            <a href="tel:+61421861357" className="underline">0421 861 357</a>.
-          </p>
+      <section className="relative overflow-hidden bg-[var(--ocean)] text-white">
+        <img src={hero} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover opacity-25" />
+        <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
+          <Reveal>
+            <h1 className="font-display text-4xl font-bold md:text-6xl">Our Menu</h1>
+            <p className="mt-3 max-w-2xl text-[var(--sand)]/90 md:text-lg">
+              Dine-in, takeaway or order ahead by phone. Prices listed in-store — call us on{" "}
+              <a href="tel:+61421861357" className="story-underline">0421 861 357</a>.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-6 md:py-16">
         {sections.map((section) => (
           <section key={section.title} className="mb-14 last:mb-0">
-            <h2 className="font-display text-2xl font-semibold text-[var(--ocean-deep)] md:text-3xl">{section.title}</h2>
-            <div className="mt-2 h-1 w-16 rounded-full bg-[var(--batter)]" />
+            <Reveal>
+              <h2 className="font-display text-2xl font-semibold text-[var(--ocean-deep)] md:text-3xl">{section.title}</h2>
+              <div className="mt-2 h-1 w-16 rounded-full bg-[var(--batter)]" />
+            </Reveal>
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {section.items.map((item) => (
-                <article key={item.name} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-                  {item.img ? (
-                    <img src={item.img} alt={item.name} loading="lazy" width={1024} height={768} className="aspect-[4/3] w-full object-cover" />
-                  ) : (
-                    <div className="aspect-[4/3] w-full bg-secondary" />
-                  )}
-                  <div className="p-5">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <h3 className="font-display text-lg font-semibold">{item.name}</h3>
-                      <span className="rounded-md bg-secondary px-2 py-0.5 text-xs font-medium text-secondary-foreground">$ —</span>
+              {section.items.map((item, i) => (
+                <Reveal key={item.name} delay={i * 0.06}>
+                  <article className="glass group h-full overflow-hidden rounded-2xl">
+                    {item.img ? (
+                      <div className="overflow-hidden">
+                        <img
+                          src={item.img}
+                          alt={item.name}
+                          loading="lazy"
+                          width={1024}
+                          height={768}
+                          className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                      </div>
+                    ) : (
+                      <div className="photo-placeholder aspect-[4/3] w-full">
+                        <Camera className="h-6 w-6" />
+                        <span>Photo coming soon</span>
+                      </div>
+                    )}
+                    <div className="p-5">
+                      <div className="flex items-baseline justify-between gap-3">
+                        <h3 className="font-display text-lg font-semibold">{item.name}</h3>
+                        <span className="price-placeholder">$XX.XX</span>
+                      </div>
+                      <p className="mt-1 text-sm text-muted-foreground">{item.desc}</p>
                     </div>
-                    <p className="mt-1 text-sm text-muted-foreground">{item.desc}</p>
-                  </div>
-                </article>
+                  </article>
+                </Reveal>
               ))}
             </div>
           </section>
