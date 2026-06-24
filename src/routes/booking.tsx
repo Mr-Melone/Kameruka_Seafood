@@ -119,7 +119,7 @@ function BookingPage() {
           )}
         </div>
 
-        <aside className="rounded-2xl border border-border bg-secondary/50 p-6">
+        <aside className="glass rounded-2xl p-6">
           <h3 className="font-display text-lg font-semibold text-[var(--ocean-deep)]">Opening Hours</h3>
           <p className="mt-1 text-xs text-muted-foreground">Please book within hours.</p>
           <ul className="mt-4 space-y-1.5 text-sm">
