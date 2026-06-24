@@ -9,6 +9,8 @@ import salad from "@/assets/salad.jpg";
 import platter from "@/assets/platter.jpg";
 import kids from "@/assets/kids.jpg";
 import raw from "@/assets/raw-seafood.jpg";
+import { Reveal } from "@/components/reveal";
+import { Camera } from "lucide-react";
 
 export const Route = createFileRoute("/menu")({
   head: () => ({
