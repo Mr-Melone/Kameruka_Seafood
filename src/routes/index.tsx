@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { Reveal, CountUp } from "@/components/reveal";
 import hero from "@/assets/hero-fish-chips.jpg";
+import heroVideo from "@/assets/hero-fish-chips.mp4.asset.json";
 import calamari from "@/assets/calamari.jpg";
 import oysters from "@/assets/oysters.jpg";
 import platter from "@/assets/platter.jpg";
@@ -38,12 +39,17 @@ function HomePage() {
         className="relative isolate flex h-screen min-h-[640px] w-full items-center overflow-hidden bg-[var(--ocean-deep)] text-[var(--sand)]"
       >
         {/* Parallax background layers */}
-        <motion.img
-          src={hero}
-          alt=""
+        <motion.video
+          src={heroVideo.url}
+          poster={hero}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
           aria-hidden
           style={{ y: yBack }}
-          className="absolute inset-0 h-[120%] w-full object-cover opacity-60 animate-ken-burns"
+          className="absolute inset-0 h-[120%] w-full object-cover opacity-60"
         />
         <motion.div
           style={{ y: yMid }}
@@ -79,7 +85,7 @@ function HomePage() {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="mt-5 max-w-4xl font-display text-5xl font-bold leading-[1.05] text-white md:text-7xl lg:text-8xl"
           >
-            Kameruka <span className="text-[var(--batter)] text-shimmer">Seafood</span>
+            Kameruka <span className="text-[var(--batter)]">Seafood</span>
           </motion.h1>
 
           <motion.p
