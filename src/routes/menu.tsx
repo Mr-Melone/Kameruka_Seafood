@@ -92,7 +92,7 @@ const sections: Section[] = [
     title: "Raw Seafood (Takeaway Uncooked)",
     items: [
       { name: "Fresh Fillets", desc: "Daily catch — ask about today's selection.", img: raw },
-      { name: "Green Prawns & Live Shellfish", desc: "Take home and cook your own — ask our team." },
+      { name: "Green Prawns & Live Shellfish", desc: "Take home and cook your own — ask our team.", img: greenPrawns },
     ],
   },
 ];
