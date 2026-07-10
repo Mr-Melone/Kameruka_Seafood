@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { Reveal, CountUp } from "@/components/reveal";
 import hero from "@/assets/hero-fish-chips.jpg";
+import heroVideo from "@/assets/hero-fish-chips.mp4.asset.json";
 import calamari from "@/assets/calamari.jpg";
 import oysters from "@/assets/oysters.jpg";
 import platter from "@/assets/platter.jpg";
@@ -38,12 +39,17 @@ function HomePage() {
         className="relative isolate flex h-screen min-h-[640px] w-full items-center overflow-hidden bg-[var(--ocean-deep)] text-[var(--sand)]"
       >
         {/* Parallax background layers */}
-        <motion.img
-          src={hero}
-          alt=""
+        <motion.video
+          src={heroVideo.url}
+          poster={hero}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
           aria-hidden
           style={{ y: yBack }}
-          className="absolute inset-0 h-[120%] w-full object-cover opacity-60 animate-ken-burns"
+          className="absolute inset-0 h-[120%] w-full object-cover opacity-60"
         />
         <motion.div
           style={{ y: yMid }}
