@@ -2,13 +2,21 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import hero from "@/assets/hero-fish-chips.jpg";
 import burger from "@/assets/burger.jpg";
+import prawnBurger from "@/assets/prawn-burger.jpg";
 import oysters from "@/assets/oysters.jpg";
 import kilpatrick from "@/assets/oysters-kilpatrick.jpg";
 import calamari from "@/assets/calamari.jpg";
+import spCalamari from "@/assets/sp-calamari.jpg";
 import salad from "@/assets/salad.jpg";
+import greekSalad from "@/assets/greek-salad.jpg";
 import platter from "@/assets/platter.jpg";
+import partyPack from "@/assets/party-pack.jpg";
 import kids from "@/assets/kids.jpg";
+import kidsNuggets from "@/assets/kids-nuggets.jpg";
 import raw from "@/assets/raw-seafood.jpg";
+import greenPrawns from "@/assets/green-prawns.jpg";
+import grilledFish from "@/assets/grilled-fish.jpg";
+import crumbedFish from "@/assets/crumbed-fish.jpg";
 import { Reveal } from "@/components/reveal";
 import { Camera } from "lucide-react";
 
@@ -34,15 +42,15 @@ const sections: Section[] = [
     title: "Fish & Chips",
     items: [
       { name: "Classic Fish & Chips", desc: "Beer-battered fillet with hand-cut chips and lemon.", img: hero },
-      { name: "Grilled Fish & Chips", desc: "Lightly seasoned grilled fillet, chips and salad." },
-      { name: "Crumbed Fish & Chips", desc: "Golden crumbed fillet with chips and tartare." },
+      { name: "Grilled Fish & Chips", desc: "Lightly seasoned grilled fillet, chips and salad.", img: grilledFish },
+      { name: "Crumbed Fish & Chips", desc: "Golden crumbed fillet with chips and tartare.", img: crumbedFish },
     ],
   },
   {
     title: "Burgers",
     items: [
       { name: "Fish Burger", desc: "Crispy fillet, lettuce, tomato, tartare on a brioche bun.", img: burger },
-      { name: "Prawn Burger", desc: "Panko prawns, slaw, aioli, soft bun." },
+      { name: "Prawn Burger", desc: "Panko prawns, slaw, aioli, soft bun.", img: prawnBurger },
     ],
   },
   {
@@ -56,35 +64,35 @@ const sections: Section[] = [
     title: "Calamari",
     items: [
       { name: "Crumbed Calamari", desc: "Tender rings in seasoned crumb with aioli.", img: calamari },
-      { name: "Salt & Pepper Calamari", desc: "Lightly dusted, chilli, shallots, lime." },
+      { name: "Salt & Pepper Calamari", desc: "Lightly dusted, chilli, shallots, lime.", img: spCalamari },
     ],
   },
   {
     title: "Salads",
     items: [
       { name: "Garden Salad", desc: "Mixed leaves, cucumber, tomato, onion, house dressing.", img: salad },
-      { name: "Greek Salad", desc: "Feta, olives, cucumber, tomato, red onion." },
+      { name: "Greek Salad", desc: "Feta, olives, cucumber, tomato, red onion.", img: greekSalad },
     ],
   },
   {
     title: "Platters & Party Packs",
     items: [
       { name: "Seafood Platter for 2", desc: "Fish, calamari, prawns, scallops, chips, salad.", img: platter },
-      { name: "Family Party Pack", desc: "Generous mix of our favourites — perfect for sharing." },
+      { name: "Family Party Pack", desc: "Generous mix of our favourites — perfect for sharing.", img: partyPack },
     ],
   },
   {
     title: "Kids Meals",
     items: [
       { name: "Kids Fish & Chips", desc: "Smaller battered fillet with chips.", img: kids },
-      { name: "Kids Nuggets & Chips", desc: "Crispy nuggets with chips and tomato sauce." },
+      { name: "Kids Nuggets & Chips", desc: "Crispy nuggets with chips and tomato sauce.", img: kidsNuggets },
     ],
   },
   {
     title: "Raw Seafood (Takeaway Uncooked)",
     items: [
       { name: "Fresh Fillets", desc: "Daily catch — ask about today's selection.", img: raw },
-      { name: "Green Prawns & Live Shellfish", desc: "Take home and cook your own — ask our team." },
+      { name: "Green Prawns & Live Shellfish", desc: "Take home and cook your own — ask our team.", img: greenPrawns },
     ],
   },
 ];
