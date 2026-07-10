@@ -43,7 +43,7 @@ function HomePage() {
           alt=""
           aria-hidden
           style={{ y: yBack }}
-          className="absolute inset-0 h-[120%] w-full object-cover opacity-50"
+          className="absolute inset-0 h-[120%] w-full object-cover opacity-60 animate-ken-burns"
         />
         <motion.div
           style={{ y: yMid }}
