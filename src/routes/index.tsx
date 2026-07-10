@@ -79,7 +79,7 @@ function HomePage() {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="mt-5 max-w-4xl font-display text-5xl font-bold leading-[1.05] text-white md:text-7xl lg:text-8xl"
           >
-            Kameruka <span className="text-[var(--batter)]">Seafood</span>
+            Kameruka <span className="text-[var(--batter)] text-shimmer">Seafood</span>
           </motion.h1>
 
           <motion.p
