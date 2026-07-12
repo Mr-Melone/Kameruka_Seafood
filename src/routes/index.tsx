@@ -4,8 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { Reveal, CountUp } from "@/components/reveal";
-import hero from "@/assets/hero-fish-chips.jpg";
-import heroVideo from "@/assets/hero-fish-chips.mp4.asset.json";
+import hero from "@/assets/hero-wide.jpg";
+import heroVideo from "@/assets/hero-wide.mp4.asset.json";
 import calamari from "@/assets/calamari.jpg";
 import oysters from "@/assets/oysters.jpg";
 import platter from "@/assets/platter.jpg";
@@ -39,17 +39,12 @@ function HomePage() {
         className="relative isolate flex h-screen min-h-[640px] w-full items-center overflow-hidden bg-[var(--ocean-deep)] text-[var(--sand)]"
       >
         {/* Parallax background layers */}
-        <motion.video
-          src={heroVideo.url}
-          poster={hero}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
+        <motion.img
+          src={hero}
+          alt=""
           aria-hidden
-          style={{ y: yBack, scale: 1.15 }}
-          className="absolute inset-0 h-full w-full object-cover opacity-60"
+          style={{ y: yBack }}
+          className="absolute inset-0 h-full w-full object-cover opacity-60 animate-ken-burns"
         />
         <motion.div
           style={{ y: yMid }}
@@ -135,7 +130,7 @@ function HomePage() {
       {/* Rating strip with animated counter */}
       <section className="border-b border-border bg-[var(--sand)]">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3 px-4 py-6 text-center md:flex-row md:gap-6 md:px-6">
-          <div className="flex items-center gap-1 text-[var(--batter)]">
+          <div className="flex items-center gap-1 text-[var(--ocean)]">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} className={`h-5 w-5 ${i < 4 ? "fill-current" : "fill-current opacity-60"}`} />
             ))}
@@ -174,7 +169,7 @@ function HomePage() {
           <Reveal>
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-[var(--batter)]">From the Kitchen</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-[var(--ocean)]">From the Kitchen</p>
                 <h2 className="mt-2 font-display text-3xl font-bold md:text-5xl">Customer Favourites</h2>
               </div>
               <Link to="/menu" className="hidden text-sm font-semibold text-[var(--ocean)] story-underline md:inline-flex">
