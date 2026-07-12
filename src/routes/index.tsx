@@ -48,8 +48,8 @@ function HomePage() {
           playsInline
           preload="auto"
           aria-hidden
-          style={{ y: yBack }}
-          className="absolute inset-0 h-full w-full object-contain opacity-60"
+          style={{ y: yBack, scale: 1.15 }}
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
         <motion.div
           style={{ y: yMid }}
