@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { Reveal, CountUp } from "@/components/reveal";
 import hero from "@/assets/hero-wide.jpg";
-import heroVideo from "@/assets/hero-wide.mp4.asset.json";
+import heroVideo from "@/assets/hero-shop-tour.mp4.asset.json";
 import calamari from "@/assets/calamari.jpg";
 import oysters from "@/assets/oysters.jpg";
 import platter from "@/assets/platter.jpg";
