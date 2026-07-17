@@ -38,13 +38,18 @@ function HomePage() {
         ref={heroRef}
         className="relative isolate flex h-screen min-h-[640px] w-full items-center overflow-hidden bg-[var(--ocean-deep)] text-[var(--sand)]"
       >
-        {/* Parallax background layers */}
-        <motion.img
-          src={hero}
-          alt=""
+        {/* Hero video tour of the shop */}
+        <motion.video
+          src={heroVideo.url}
+          poster={hero}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
           aria-hidden
           style={{ y: yBack }}
-          className="absolute inset-0 h-full w-full object-cover opacity-60 animate-ken-burns"
+          className="absolute inset-0 h-full w-full object-cover opacity-80"
         />
         <motion.div
           style={{ y: yMid }}
